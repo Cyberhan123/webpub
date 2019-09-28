@@ -1,20 +1,23 @@
-import _ from 'lodash';
-import printMe from './print.js';
+import 'lodash';
+import './print.js';
+import './js/app.js';
 //额外到处也要有这个！！！！！
-import css from './css/style.css';
-import sass from './sass/index.scss';
-function component() {
-    var element = document.createElement('div');
-   var btn = document.createElement('button');
+import './css/style.css';
+import './sass/index.scss';
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-   btn.innerHTML = 'Click me and check the console!';
-   btn.onclick = printMe;
+// function component() {
+//     var element = document.createElement('div');
+//    var btn = document.createElement('button');
 
-   element.appendChild(btn);
+//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-    return element;
-  }
+//    btn.innerHTML = 'Click me and check the console!';
+//    btn.onclick = printMe;
 
-  document.body.appendChild(component());
+//    element.appendChild(btn);
+
+//     return element;
+//   }
+
+//   document.body.appendChild(component());
