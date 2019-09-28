@@ -1,23 +1,13 @@
-import 'lodash';
-import './print.js';
-import './js/app.js';
-//额外到处也要有这个！！！！！
-import './css/style.css';
-import './sass/index.scss';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+import './css/index.css';
+import App from './view/App.jsx';
+ import * as serviceWorker from './serviceWorker';
 
+ ReactDOM.render(<App />, document.getElementById('root'));
 
-// function component() {
-//     var element = document.createElement('div');
-//    var btn = document.createElement('button');
-
-//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-//    btn.innerHTML = 'Click me and check the console!';
-//    btn.onclick = printMe;
-
-//    element.appendChild(btn);
-
-//     return element;
-//   }
-
-//   document.body.appendChild(component());
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+ serviceWorker.unregister();
+// document.getElementById('root').innerHTML = "Hello React";
