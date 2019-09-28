@@ -10,4 +10,5 @@ import App from './view/App.jsx';
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
  serviceWorker.unregister();
+
 // document.getElementById('root').innerHTML = "Hello React";
