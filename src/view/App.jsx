@@ -9,7 +9,7 @@ import style from './../css/App.css';
 export default class App extends React.Component {
   render() {
     return (
-      <div className={style.App + " container"}>
+      <div className={style.App}>
 
         <Router>
           <Navbar>
