@@ -3,7 +3,9 @@
 import './css/index.css';
 import App from './view/App.jsx';
 import * as serviceWorker from './serviceWorker';
+import initScreen from "./common/common";
 
+initScreen();
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
