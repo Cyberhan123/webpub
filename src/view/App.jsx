@@ -6,7 +6,7 @@ import routes from '../router'
 import RouteWithSubRoutes from "./../common/RouteWithSubRoutes.js";
 import Navbar from './../components/NavBar.jsx';
 import style from './../css/App.css';
-import { get } from "http";
+import mStyle from './../css/m/App.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,19 +32,34 @@ export default class App extends React.Component {
     this.state.navList.map((elem, index) => {
       navItems.push(<Link to="/" key={`nav-${index}`}>{elem.name}</Link>);
     })
-    return (
-      <div className={style.App}>
-        <Router>
-          <Navbar>
-            <div>
-              {navItems}
-            </div>
-          </Navbar>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
-        </Router>
-      </div>
-    );
+    if (window.$store.getState() === 'pc') {
+      return (
+        <div className={style.App}>
+          <Router>
+            <Navbar>
+              <div>
+                {navItems}
+              </div>
+            </Navbar>
+            {routes.map((route, i) => (
+              <RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </Router>
+        </div>);
+    } else {
+      return (
+        <div className={mStyle.App}>
+          <Router>
+            <Navbar>
+              <div>
+                {navItems}
+              </div>
+            </Navbar>
+            {routes.map((route, i) => (
+              <RouteWithSubRoutes key={i} {...route} />
+            ))}
+          </Router>
+        </div>);
+    }
   }
 }

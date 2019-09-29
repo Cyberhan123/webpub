@@ -3,7 +3,6 @@ const { createStore } = Redux;
 import type from "./actions/type";
 import initState from './actions/states.js'
 function reducer(state = initState, action) {
-    console.log(action)
     switch (action.type) {
         case 'MOBILE':
             state.TYPE = action.TYPE;
