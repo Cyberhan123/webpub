@@ -1,5 +1,18 @@
 // import { createStore } from 'redux'
-import counter from './actions/demo';
-let store = createStore(counter);
+const { createStore } = Redux;
+import type from "./actions/type";
+import initState from './actions/states.js'
+function reducer(state = initState, action) {
+    console.log(action)
+    switch (action.type) {
+        case 'MOBILE':
+            state.TYPE = action.TYPE;
+            break;
+        default:
+            break;
+    }
+    return state;
+}
+let store = createStore(reducer);
 
 export default store;

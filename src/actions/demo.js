@@ -10,6 +10,4 @@
  * follows a different convention (such as function maps) if it makes sense for your
  * project.
  */
-function counter(state = 0, action) {
- 
-}
+

@@ -1,15 +1,48 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
-import './css/index.css';
 import App from './view/App.jsx';
-import * as serviceWorker from './serviceWorker';
-import initScreen from "./common/common";
 
-initScreen();
-ReactDOM.render(<App />, document.getElementById('root'));
+import * as serviceWorker from './serviceWorker';
+import { initScreen, isMobile } from "./common/common";
+import store from "./redux";
+const { Provider } = ReactRedux;
+window.$store = store;
+// 将action暂时存在这里
+function type() {
+    if (isMobile()) {
+        const MOBILE = 'MOBILE';
+        let dispatchTYPE = {
+            type: MOBILE,
+            TYPE: 'm'
+        };
+        store.dispatch(dispatchTYPE);
+    } else {
+        const MOBILE = 'MOBILE';
+        let dispatchTYPE = {
+            type: MOBILE,
+            TYPE: 'pc'
+        };
+        store.dispatch(dispatchTYPE);
+    }
+}
+type();
+
+if (store.getState().TYPE === 'pc') {
+    import('./css/index.css')
+} else if (store.getState().TYPE === 'm') {
+    import('./css/m/index.css')
+    initScreen();
+}
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
- serviceWorker.unregister();
+serviceWorker.unregister();
 // document.getElementById('root').innerHTML = "Hello React";

@@ -11,4 +11,7 @@ var initScreen = function () {
     });
 }
 
-export default initScreen;
+var isMobile = function () {
+    return /iphone|android|mobile/i.test(navigator.userAgent.toLowerCase())
+}
+export {initScreen, isMobile};
