@@ -5,7 +5,7 @@ import LoginHeader from '../components/LoginHeader.jsx'
 
 export default class login extends React.Component {
     render() {
-        return<div>
+        return (<div>
         <LoginHeader />
         <div className={loginCss.test}>
                 <label htmlFor="userName">UserName</label>
@@ -14,6 +14,6 @@ export default class login extends React.Component {
                 <input id="passWord" type="password"/>
                 <button className={loginCss.login}>sign in</button>
         </div>
-        </div>
+        </div>)
     }
 }
