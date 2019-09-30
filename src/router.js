@@ -2,7 +2,7 @@
 // import Bus from './view/Bus.jsx';
 // import Cart from './view/Cart.jsx';
 import Home from './view/Home.jsx'
-import Login from './view/login.jsx'
+import Login from './view/Login.jsx'
 const routes = [
     {
         path: "/home",
