@@ -2,7 +2,6 @@
 KISSY CSS Reset
 理念：清除和重置是紧密不可分的
 特色：1.适应中文 2.基于最新主流浏览器
-维护：玉伯(lifesinger@gmail.com), 正淳(ragecarrier@gmail.com)
 */
 
 /* 清除内外边距 */
@@ -15,12 +14,6 @@ th, td { /* table elements 表格元素 */
     padding: 0;
 }
 
-/* 设置默认字体 */
-body,
-button, input, select, textarea { /* for ie */
-    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
-    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
-}
 
 h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
 h2 { font-size: 16px; }

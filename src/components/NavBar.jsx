@@ -1,5 +1,8 @@
+
+import getNavList from '../api/fetchCommonData'
 import style from './../css/NavBar.css';
 import mStyle from '../css/mobilePhone/NavBar.css';
+const { Link } = ReactRouterDOM;
 export default class NavBar extends React.Component {
     constructor(props) {
         super(props);
@@ -21,9 +24,9 @@ export default class NavBar extends React.Component {
 
     render() {
         let navItems = [];
-        let isPc=window.$store.getState().TYPE === "pc"
+        let isPc = window.$store.getState().TYPE === "pc"
         this.state.navList.map((elem, index) => {
-          navItems.push(<div className={isPc?style['nav-item']:mStyle['nav-item']}><Link to="/" key={`nav-${index}`}>{elem.name}</Link></div>);
+            navItems.push(<div key={`nav-${index}`} className={isPc ? style['nav-item'] : mStyle['nav-item']}><Link to="/">{elem.name}</Link></div>);
         })
         if (isPc) {
             return (
