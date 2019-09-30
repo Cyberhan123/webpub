@@ -35,9 +35,7 @@ if (store.getState().TYPE === 'pc') {
 }
 
 ReactDOM.render(
-    <Provider store={store}>
         <App />
-    </Provider>
     , document.getElementById('root')
 );
 
