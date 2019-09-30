@@ -1,5 +1,5 @@
 import style from './../css/NavBar.css';
-import mStyle from './../css/m/NavBar.css';
+import mStyle from '../css/mobilePhone/NavBar.css';
 export default class NavBar extends React.Component {
     render() {
         if(window.$store.getState().TYPE==="pc"){
@@ -20,6 +20,6 @@ export default class NavBar extends React.Component {
                 </nav>
             );
         }
-      
+
     }
 }

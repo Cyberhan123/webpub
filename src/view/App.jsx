@@ -6,7 +6,7 @@ import routes from '../router'
 import RouteWithSubRoutes from "./../common/RouteWithSubRoutes.js";
 import Navbar from './../components/NavBar.jsx';
 import style from './../css/App.css';
-import mStyle from './../css/m/App.css';
+import mStyle from '../css/mobilePhone/App.css';
 
 export default class App extends React.Component {
   constructor(props) {
