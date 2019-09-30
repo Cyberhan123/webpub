@@ -1,0 +1,46 @@
+.test{
+    background-color: ghostwhite;
+    width: 20rem;
+    height: 15rem;
+    margin-left: 50%;
+    margin-top: 8%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 1px solid #d8dee2;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+.test input{
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    outline: none;
+
+}
+.test input:focus{
+    border-color: dodgerblue;
+}
+
+.test label{
+    float: left;
+}
+
+.login{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    height: 2rem;
+    background-color: #28a745;
+    border: 0;
+    border-radius: 0.2rem;
+    /*box-shadow: 2px 2px 5px #bbb;*/
+    outline: none;
+}
+.login:hover{
+     background-color: red;
+ }
+.login:active{
+    background-color: purple;
+   }
