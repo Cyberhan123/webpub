@@ -18,7 +18,7 @@ module.exports = {
     /*输出到dist目录，输出文件名字为bundle.js*/
     output: {
         //发布的基本路径
-        publicPath: '/dist/',
+      //  publicPath: '/dist/',
         path: path.join(__dirname, '../dist'),
         filename: '[name].[hash].js',
         chunkFilename: '[name]_[chunkhash:8].js'
