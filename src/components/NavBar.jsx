@@ -1,7 +1,5 @@
 import style from './../css/NavBar.css';
-import mStyle from './../css/m/NavBar.css';
-import getNavList from "./../api/HomeApi.js";
-const { Link } = ReactRouterDOM;
+import mStyle from '../css/mobilePhone/NavBar.css';
 export default class NavBar extends React.Component {
     constructor(props) {
         super(props);

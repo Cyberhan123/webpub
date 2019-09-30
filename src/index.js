@@ -13,7 +13,7 @@ function type() {
         const MOBILE = 'MOBILE';
         let dispatchTYPE = {
             type: MOBILE,
-            TYPE: 'm'
+            TYPE: 'mobilePhone'
         };
         store.dispatch(dispatchTYPE);
     } else {
@@ -29,8 +29,8 @@ type();
 
 if (store.getState().TYPE === 'pc') {
     import('./css/index.css')
-} else if (store.getState().TYPE === 'm') {
-    import('./css/m/index.css')
+} else if (store.getState().TYPE === 'mobilePhone') {
+    import('./css/mobilePhone/index.css')
     initScreen();
 }
 
