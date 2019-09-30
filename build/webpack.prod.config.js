@@ -13,7 +13,8 @@ module.exports = {
         ],
         // vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
     },
-    mode: 'production',
+    //development
+    mode: 'development',
 
     /*输出到dist目录，输出文件名字为bundle.js*/
     output: {
