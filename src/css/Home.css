@@ -32,6 +32,11 @@
     height: 500px;
     background:linear-gradient(to right,#11507e,#0c9598)  ;
 }
+.wave{
+    fill: #fff;
+    position: absolute;
+    bottom: 0px;
+}
 .title-wraper{
     position: relative;
     top: 50px;
