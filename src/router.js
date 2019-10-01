@@ -4,12 +4,16 @@
 import Home from './view/Home.jsx'
 import Login from './view/Login.jsx'
 const routes = [
+    // {
+    //     patch: "/",
+    //     to: "/home"
+    // },
     {
-        path: "/home",
-        component: Home
-    },{
-        path:"/login",
-        component:Login
+        path: "/",
+        component: Home, 
+    }, {
+        path: "/login",
+        component: Login
 
     }
 ];

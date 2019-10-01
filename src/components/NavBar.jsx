@@ -30,12 +30,16 @@ export default class NavBar extends React.Component {
         })
         if (isPc) {
             return (
-                <nav className={style.nav}>
-                    <div>
-                        欢迎
+                <div className={style['nav-wraper']}>
+                    <nav className={style.nav}>
+                        <div className={style['nav-item']}>
+                            <div className={style.logo}></div>
+                            devOPS自动运维
                     </div>
-                    {navItems}
-                </nav>
+                        {navItems}
+                    </nav>
+                </div>
+
             );
         } else {
             return (

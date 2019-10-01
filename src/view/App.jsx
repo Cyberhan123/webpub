@@ -1,7 +1,7 @@
 
 const { BrowserRouter, Link } = ReactRouterDOM;
 const Router = BrowserRouter;
-
+import BottomBar from './../components/BottomBar.jsx'
 import routes from '../router'
 import RouteWithSubRoutes from "./../common/RouteWithSubRoutes.js";
 import Navbar from './../components/NavBar.jsx';
@@ -15,10 +15,13 @@ export default class App extends React.Component {
       return (
         <div className={style.App}>
           <Router>
-            <Navbar />
+            <Navbar/>
+            <main>
             {routes.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
             ))}
+            </main>
+        
           </Router>
         </div>);
     } else {
@@ -26,9 +29,11 @@ export default class App extends React.Component {
         <div className={mStyle.App}>
           <Router>
             <Navbar/>
+            <main>
             {routes.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
             ))}
+            </main>
           </Router>
         </div>);
     }

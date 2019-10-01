@@ -1,11 +1,44 @@
+
+.nav-wraper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #000;
+}
+.nav-wraper::after{
+    content: '';
+    clear: both;
+}
 .nav{
+    position: relative;
+    left: calc(50%-600px);
     width: 1200px;
     height: 50px;
     background: #000;
-    display: flex
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+    font-weight: 400;
+    line-height: 50px;
 }
 
-
-.weclome{
-
+.nav-item .logo{
+    position: relative;
+    top: 8px;
+    left: -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../asset/icon/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nav-item a{
+   text-align: center;
+   color: #fff !important;
+   font-weight: 400;
+   line-height: 50px;
 }
