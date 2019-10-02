@@ -1,12 +1,41 @@
 import style from './../../css/Website.css'
+import { getUserWebsite } from '../../api/fetchUserData';
 const { BrowserRouter, Link } = ReactRouterDOM;
 
 class WebSite extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            list: [],
+        }
+    }
+    async fetchWebsiteList() {
+        const data = await getUserWebsite();
+        this.setState({
+            list: data.data
+        })
+    }
+    componentWillMount() {
+        this.fetchWebsiteList()
     }
     render() {
+        let dom = [];
+        console.log(this.state)
+        this.state.list.map((value, index) => {
+            dom.push(
+                <li key={`list-${index}`}>
+                    <div>
+                       网站名：{value.name}
+                    </div>
+                    <div>
+                        {value.desc}
+                    </div>
+                    <div>
+                        最后发布时间：{value.time}
+                    </div>
+                </li>
+            )
+        })
         return (
             <div className={style['website-wraper']}>
                 <div className={style.header}>
@@ -22,7 +51,7 @@ class WebSite extends React.Component {
                     </div>
                     <div className={style['list-wraper']}>
                         <ul>
-
+                            {dom}
                         </ul>
                     </div>
                 </div>

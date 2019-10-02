@@ -14,9 +14,9 @@ export default class NavBar extends React.Component {
         const __this = this
         async function fetchNavList() {
             let data = await getNavList();
-            data = JSON.parse(data).data
+           
             __this.setState({
-                navList: data
+                navList: data.data
             })
         };
         fetchNavList()
