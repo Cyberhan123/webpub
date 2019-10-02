@@ -21,10 +21,10 @@ export default class login extends React.Component {
                 <section><LoginHeader />
                     <div className={LoginCss.container}>
                         <label htmlFor="userName">UserName</label>
-                        <input id="userName" onBlur={this.checkAccount} type="text" />
+                        <input className={LoginCss['user-info']} id="userName"  type="text" />
                         <label htmlFor="passWord">PassWord</label>
-                        <input id="passWord" onBlur={this.checkPassWord} type="password" />
-                        <button className={LoginCss.login} onClick={this.login}>登  录</button>
+                        <input id="passWord" className={LoginCss['user-info']} type="password" />
+                        <a href="" className={LoginCss.login} onClick={this.login}>登 录</a>
                     </div>
                     <div className={LoginCss['create-account']}>新用户？<a href="">创建账号</a> </div>
                 </section>)

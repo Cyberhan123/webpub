@@ -1,11 +1,11 @@
 .loginHeader{
     position: relative;
-    left: calc(50% - 50px);
+    left: calc(50% - 40px);
     background: url('./../../public/images/devops.png') no-repeat;
     background-size: contain;
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     background-position: center;
 }
 
