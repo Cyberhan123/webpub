@@ -1,46 +1,69 @@
-.test{
+.container {
     background-color: ghostwhite;
-    width: 20rem;
-    height: 15rem;
-    margin-left: 50%;
-    margin-top: 8%;
-    transform: translate(-50%,-50%);
+    width: 280px;
+    height: 230px;
+    position: relative;
+    left: calc(50% - 140px);
     text-align: center;
-    border: 1px solid #d8dee2;
-    border-radius: 1rem;
-    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
 
 }
-.test input{
+
+.container input {
     width: 100%;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.2rem;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
     outline: none;
+    padding: 2px;
 
 }
-.test input:focus{
+
+.container input:focus {
     border-color: dodgerblue;
 }
 
-.test label{
+.container label {
     float: left;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-.login{
+.login {
     text-align: center;
     width: 100%;
     color: #fff;
-    height: 2rem;
-    background-color: #28a745;
+    height:40px ;
+    background: #28a745;;
     border: 0;
-    border-radius: 0.2rem;
-    /*box-shadow: 2px 2px 5px #bbb;*/
+    border-radius: 5px;
     outline: none;
 }
-.login:hover{
-     background-color: red;
- }
-.login:active{
-    background-color: purple;
-   }
+
+.login:hover {
+    filter:hue-rotate(-10deg);
+}
+
+.login:active {
+    filter:hue-rotate(-20deg);
+
+}
+.create-account{
+    width: 280px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0 20px;
+    position: relative;
+    left: calc(50% - 140px);
+    text-align: center;
+    border: 1px solid #d8dee2;
+    line-height: 50px;
+    border-radius: 5px;
+
+}
+.create-account a{
+    color: #0366d6;
+}

@@ -41,8 +41,8 @@ let POST = function (url, data) {
         xmlhttp.setRequestHeader('Content-Type', 'application/json');
         xmlhttp.send(JSON.stringify(data));
         xmlhttp.onreadystatechange = function () {
-            console.log(xmlhttp.readyState == 4 && xmlhttp.status == 200)
-            if (xmlhttp.readyState == 4) {
+            console.log(xmlhttp.readyState === 4 && xmlhttp.status === 200)
+            if (xmlhttp.readyState === 4) {
                 if (xmlhttp.status == 200) {
                     resolve(JSON.parse(xmlhttp.response));
                 } else {

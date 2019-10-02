@@ -1,6 +1,3 @@
-.headerContainer{
-
-}
 .loginHeader{
     margin-left: 50%;
     transform: translateX(-50%);
@@ -11,6 +8,4 @@
     width: 2rem;
     background-position: center;
 }
-.loginHeader img{
 
-}
