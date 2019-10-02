@@ -1,7 +1,7 @@
 
 const { BrowserRouter, Link } = ReactRouterDOM;
 const Router = BrowserRouter;
-import BottomBar from './../components/BottomBar.jsx'
+import Bottombar from './../components/BottomBar.jsx'
 import routes from '../router'
 import RouteWithSubRoutes from "./../common/RouteWithSubRoutes.js";
 import Navbar from './../components/NavBar.jsx';
@@ -21,7 +21,7 @@ export default class App extends React.Component {
               <RouteWithSubRoutes key={i} {...route} />
             ))}
             </main>
-        
+            <Bottombar/>
           </Router>
         </div>);
     } else {
