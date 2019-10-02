@@ -28,6 +28,7 @@
 
 .container label {
     float: left;
+    color: #24292E;
     font-weight: 500;
     margin-bottom: 10px;
 }
