@@ -3,6 +3,8 @@
 // import Cart from './view/Cart.jsx';
 import Home from './view/Home.jsx'
 import Login from './view/Login.jsx'
+import Website from './view/website/index.jsx'
+import Showbuild from './view/website/show.jsx'
 const routes = [
     // {
     //     patch: "/",
@@ -10,11 +12,17 @@ const routes = [
     // },
     {
         path: "/home",
-        component: Home, 
+        component: Home,
     }, {
         path: "/login",
         component: Login
 
+    }, {
+        path: "/website/index",
+        component: Website
+    },{
+        path:"/website/showbuild",
+        component:Showbuild
     }
 ];
 
