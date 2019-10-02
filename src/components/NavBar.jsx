@@ -26,7 +26,7 @@ export default class NavBar extends React.Component {
         let navItems = [];
         let isPc = window.$store.getState().TYPE === "pc"
         this.state.navList.map((elem, index) => {
-            navItems.push(<div key={`nav-${index}`} className={isPc ? style['nav-item'] : mStyle['nav-item']}><Link to="/">{elem.name}</Link></div>);
+            navItems.push(<div key={`nav-${index}`} className={isPc ? style['nav-item'] : mStyle['nav-item']}><Link to={elem.link}>{elem.name}</Link></div>);
         })
         if (isPc) {
             return (
