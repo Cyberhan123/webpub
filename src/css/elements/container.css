@@ -1,0 +1,15 @@
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.container.is-flex {
+    flex-grow: 1;
+}
+
+.container.is-fluid {
+    margin-left: 32px;
+    margin-right: 32px;
+    max-width: none;
+}

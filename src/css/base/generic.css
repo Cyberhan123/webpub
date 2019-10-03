@@ -1,0 +1,221 @@
+.has-text-white {
+    color: white;
+}
+
+a.has-text-white:hover,
+a.has-text-white:focus {
+    color: #e6e6e6;
+}
+
+.has-background-white {
+    background-color: white;
+}
+
+.has-text-black {
+    color: #0a0a0a;
+}
+
+a.has-text-black:hover,
+a.has-text-black:focus {
+    color: black;
+}
+
+.has-background-black {
+    background-color: #0a0a0a;
+}
+
+.has-text-light {
+    color: whitesmoke;
+}
+
+a.has-text-light:hover,
+a.has-text-light:focus {
+    color: #dbdbdb;
+}
+
+.has-background-light {
+    background-color: whitesmoke;
+}
+
+.has-text-dark {
+    color: #363636;
+}
+
+a.has-text-dark:hover,
+a.has-text-dark:focus {
+    color: #1c1c1c;
+}
+
+.has-background-dark {
+    background-color: #363636;
+}
+
+.has-text-primary {
+    color: #00d1b2;
+}
+
+a.has-text-primary:hover,
+a.has-text-primary:focus {
+    color: #009e86;
+}
+
+.has-background-primary {
+    background-color: #00d1b2;
+}
+
+.has-text-link {
+    color: #3273dc;
+}
+
+a.has-text-link:hover,
+a.has-text-link:focus {
+    color: #205bbc;
+}
+
+.has-background-link {
+    background-color: #3273dc;
+}
+
+.has-text-info {
+    color: #209cee;
+}
+
+a.has-text-info:hover,
+a.has-text-info:focus {
+    color: #0f81cc;
+}
+
+.has-background-info {
+    background-color: #209cee;
+}
+
+.has-text-success {
+    color: #23d160;
+}
+
+a.has-text-success:hover,
+a.has-text-success:focus {
+    color: #1ca64c;
+}
+
+.has-background-success {
+    background-color: #23d160;
+}
+
+.has-text-warning {
+    color: #ffdd57;
+}
+
+a.has-text-warning:hover,
+a.has-text-warning:focus {
+    color: #ffd324;
+}
+
+.has-background-warning {
+    background-color: #ffdd57;
+}
+
+.has-text-danger {
+    color: #ff3860;
+}
+
+a.has-text-danger:hover,
+a.has-text-danger:focus {
+    color: #ff0537;
+}
+
+.has-background-danger {
+    background-color: #ff3860;
+}
+
+.has-text-black-bis {
+    color: #121212;
+}
+
+.has-background-black-bis {
+    background-color: #121212;
+}
+
+.has-text-black-ter {
+    color: #242424;
+}
+
+.has-background-black-ter {
+    background-color: #242424;
+}
+
+.has-text-grey-darker {
+    color: #363636;
+}
+
+.has-background-grey-darker {
+    background-color: #363636;
+}
+
+.has-text-grey-dark {
+    color: #4a4a4a;
+}
+
+.has-background-grey-dark {
+    background-color: #4a4a4a;
+}
+
+.has-text-grey {
+    color: #7a7a7a;
+}
+
+.has-background-grey {
+    background-color: #7a7a7a;
+}
+
+.has-text-grey-light {
+    color: #b5b5b5;
+}
+
+.has-background-grey-light {
+    background-color: #b5b5b5;
+}
+
+.has-text-grey-lighter {
+    color: #dbdbdb;
+}
+
+.has-background-grey-lighter {
+    background-color: #dbdbdb;
+}
+
+.has-text-white-ter {
+    color: whitesmoke;
+}
+
+.has-background-white-ter {
+    background-color: whitesmoke;
+}
+
+.has-text-white-bis {
+    color: #fafafa;
+}
+
+.has-background-white-bis {
+    background-color: #fafafa;
+}
+
+.has-text-weight-light {
+    font-weight: 300;
+}
+
+.has-text-weight-normal {
+    font-weight: 400;
+}
+
+.has-text-weight-medium {
+    font-weight: 500;
+}
+
+.has-text-weight-semibold {
+    font-weight: 600;
+}
+
+.has-text-weight-bold {
+    font-weight: 700;
+}
