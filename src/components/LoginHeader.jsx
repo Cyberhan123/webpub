@@ -3,9 +3,7 @@ import loginHeader from './../css/loginHeader.css'
 export default class LoginHeader extends React.Component {
     render() {
         if (window.$store.getState().TYPE === 'pc') {
-            return (<div>
-                <div className={loginHeader.loginHeader}/>
-            </div>)
+            return (<div className={loginHeader.loginHeader}/>)
         } else {
             return (<div>
                 <div className={MobileLoginHeader.loginHeader}/>

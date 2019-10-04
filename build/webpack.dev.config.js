@@ -15,10 +15,10 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         compress: true,  // gzip压缩
-        host: '0.0.0.0', // 允许ip访问
+        host: 'localhost', // 允许ip访问
         hot: true, // 热更新
         historyApiFallback: true, // 解决启动后刷新404
-        port: 8000 // 端口
+        port: 8080 // 端口
     },
     /*输出到dist目录，输出文件名字为bundle.js*/
     output: {
