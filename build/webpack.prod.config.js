@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//const CleanCSSPlugin = require('less-plugin-clean-css');
 
 module.exports = {
     devtool: 'none',
@@ -19,7 +20,7 @@ module.exports = {
     /*输出到dist目录，输出文件名字为bundle.js*/
     output: {
         //发布的基本路径
-      //  publicPath: '/dist/',
+        //  publicPath: '/dist/',
         path: path.join(__dirname, '../dist'),
         filename: '[name].[hash].js',
         chunkFilename: '[name]_[chunkhash:8].js'
@@ -32,21 +33,23 @@ module.exports = {
                 include: path.join(__dirname, '../src')
             },
             {
-                test: /\.css$/,
+                test: /\.(css|less)$/,
                 use: ['style-loader',
-                {
-                    loader: 'css-loader',
-                    options: {
-                        modules: {
-                            mode: 'local',
-                            localIdentName: '[local][hash:base64:5]',
-                            context: path.resolve(__dirname, 'src'),
-                            hashPrefix: 'my-custom-hash',
-                        },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[local][hash:base64:5]',
+                                context: path.resolve(__dirname, 'src'),
+                                hashPrefix: 'my-custom-hash',
+                            },
+                        }
                     }
-                }
                     ,
-                    "postcss-loader"],
+                    "postcss-loader",
+                    'less-loader', // compiles Less to CSS
+                ],
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -74,9 +77,10 @@ module.exports = {
         //     filename: "[name].[contenthash].css",
         //     chunkFilename: "[id].[contenthash].css"
         // }),
-        new OptimizeCssAssetsPlugin(),
+        new OptimizeCssAssetsPlugin(), 
+       // new CleanCSSPlugin({ advanced: true })
     ],
-    
+
     optimization: {
         splitChunks: {
             chunks: 'all'

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const CleanCSSPlugin = require('less-plugin-clean-css');
 module.exports = {
     devtool: 'inline-source-map',
     /*入口*/
@@ -35,8 +36,17 @@ module.exports = {
                 include: path.join(__dirname, '../src')
             },
             {
-                test: /\.css$/,
-                use: [{loader: MiniCssExtractPlugin.loader},
+                test: /\.(css|less)$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // only enable hot in development
+                            hmr: process.env.NODE_ENV === 'development',
+                            // if hmr does not work, this is a forceful method.
+                            reloadAll: true,
+                        },
+                    },
                     {
                         loader: 'css-loader',
                         options: {
@@ -49,7 +59,9 @@ module.exports = {
                         }
                     }
                     ,
-                    "postcss-loader"],
+                    "postcss-loader",
+                    'less-loader', // compiles Less to CSS
+                ],
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -75,7 +87,7 @@ module.exports = {
         new MiniCssExtractPlugin({ // 压缩css
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].[contenthash].css"
-        })
-
+        }),
+        //  new CleanCSSPlugin({ advanced: true })
     ]
 };

@@ -11,7 +11,7 @@ let GET = function (url, data) {
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4) {
                     if (xmlhttp.status == 200) {
-                        resolve(xmlhttp.responseText)
+                        resolve(JSON.parse(xmlhttp.responseText))
                     }
                     else {
                         reject("网络似乎出现了一些问题，请稍后再试")
