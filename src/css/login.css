@@ -33,7 +33,7 @@
     margin-bottom: 10px;
 }
 
-.login {
+.btn {
     position: relative;
     top: 5px;
     display: inline-block;
@@ -47,13 +47,13 @@
     border-radius: 5px;
 }
 
-.login:hover {
+.btn:hover {
     filter:hue-rotate(-10deg);
     text-decoration: none;
 
 }
 
-.login:active {
+.btn:active {
     text-decoration: none;
     filter:hue-rotate(-20deg);
 

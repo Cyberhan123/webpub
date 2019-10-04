@@ -24,7 +24,7 @@ export default class login extends React.Component {
                         <input className={LoginCss['user-info']} id="userName"  type="text" />
                         <label htmlFor="passWord">PassWord</label>
                         <input id="passWord" className={LoginCss['user-info']} type="password" />
-                        <a href="" className={LoginCss.login} onClick={this.login}>登 录</a>
+                        <a href="" className={LoginCss.btn} onClick={this.login}>登 录</a>
                     </div>
                     <div className={LoginCss['create-account']}>新用户？<a href="">创建账号</a> </div>
                 </section>)
