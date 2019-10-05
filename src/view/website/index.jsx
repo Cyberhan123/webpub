@@ -1,4 +1,4 @@
-import style from './../../css/Website.css'
+import style from './../../css/Website.less'
 import { getUserWebsite } from '../../api/fetchUserData';
 const { BrowserRouter, Link } = ReactRouterDOM;
 
