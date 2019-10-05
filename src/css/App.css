@@ -9,6 +9,7 @@
 main{
   width: 1200px;
   margin: 50px auto;
+  min-height: 600px;
 
 }
 

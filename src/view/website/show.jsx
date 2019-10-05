@@ -1,4 +1,4 @@
-
+import style from './../../css/WebSite.less'
 class ShowBuild extends React.Component {
     constructor(props) {
         super(props);
@@ -7,25 +7,29 @@ class ShowBuild extends React.Component {
     render() {
         return (
             <div>
-            <div>
-                <label htmlFor="">输入你要发布的页面的Git链接</label>
-                <input type="text" />
+                <div className={style.header}>
+                    <div className={style["header-bg"]}></div>
+                    <h1>创建新的网站</h1>
+                </div>
+                <div>
+                    <label htmlFor="">输入你要发布的页面的Git链接</label>
+                    <input type="text" />
 
-            </div>
-            <div>
-                <label htmlFor="">输入你的构建命令</label>
-                <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="">输入你的构建命令</label>
+                    <input type="text" />
 
+                </div>
+                <div>
+                    <label htmlFor="">输入你要灰度发布的地址</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label htmlFor="">输入你要正式发布的地址</label>
+                    <input type="text" />
+                </div>
             </div>
-            <div>
-                <label htmlFor="">输入你要灰度发布的地址</label>
-                <input type="text" />
-            </div>
-            <div>
-                <label htmlFor="">输入你要正式发布的地址</label>
-                <input type="text" />
-            </div>
-        </div>
         );
     }
 }
