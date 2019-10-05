@@ -23,15 +23,19 @@ class WebSite extends React.Component {
         console.log(this.state)
         this.state.list.map((value, index) => {
             dom.push(
-                <li key={`list-${index}`}>
-                    <div>
-                       网站名：{value.name}
+                <li key={`list-${index}`} className={style['list-item']}>
+                    <div className={style['list-item-bg-active']}></div>
+                    <div className={style['website-name']}>
+                        <h3>网站名：{value.name}</h3>
                     </div>
-                    <div>
+                    <div className={style['website-desc']}>
                         {value.desc}
                     </div>
-                    <div>
+                    <div className={style['website-time']}>
                         最后发布时间：{value.time}
+                    </div>
+                    <div className={style.arrow}>
+
                     </div>
                 </li>
             )

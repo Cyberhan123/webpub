@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     width: 100%;
+    min-width: 1200px;
     background: #000;
 }
 .nav-wraper::after{
