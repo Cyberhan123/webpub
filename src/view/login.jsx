@@ -23,9 +23,9 @@ export default class login extends React.Component {
                     <div className={LoginCss.BG}></div>
                     <LoginHeader />
                     <div className={LoginCss.container}>
-                        <label htmlFor="userName">UserName</label>
+                        <label htmlFor="userName">用户名</label>
                         <input className={LoginCss['user-info']} id="userName"  type="text" />
-                        <label htmlFor="passWord">PassWord</label>
+                        <label htmlFor="passWord">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                         <input id="passWord" className={LoginCss['user-info']} type="password" />
                         <a href="" className={LoginCss.btn} onClick={this.login}>登 录</a>
                     </div>

@@ -27,10 +27,11 @@
 }
 
 .container label {
-    float: left;
+    display: block;
+    text-align: center;
     color: #24292E;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 7px;
 }
 
 .btn {
@@ -77,7 +78,6 @@
 }
 .BG{
     position: absolute;
-    top: 50px;
     right: 0;
     left: 0;
     bottom: -162px;

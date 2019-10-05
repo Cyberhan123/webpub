@@ -5,6 +5,7 @@ import Home from './view/Home.jsx'
 import Login from './view/Login.jsx'
 import Register from "./view/register.jsx";
 import Website from './view/website/index.jsx'
+import FTP from './view/ftp.jsx'
 import Showbuild from './view/website/show.jsx'
 const routes = [
     // {
@@ -21,6 +22,9 @@ const routes = [
     },{
         path:"/register",
         component:Register
+    },{
+        path:"/ftp",
+        component:FTP
     }, {
         path: "/website/index",
         component: Website
