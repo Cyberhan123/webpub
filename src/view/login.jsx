@@ -11,6 +11,7 @@ export default class login extends React.Component {
             account: "",
             passWord: "",
         }
+
         this.checkAccount = this.checkAccount.bind(this);
         this.checkPassWord = this.checkPassWord.bind(this);
         this.login = this.login.bind(this);
