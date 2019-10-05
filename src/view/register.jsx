@@ -4,6 +4,7 @@ import LoginCss from './../css/login.css'
 export default class Register extends React.Component {
     render() {
         return (<section>
+            <div className={LoginCss.BG}></div>
             <div className={LoginCss.container+" "+RegisterCss.container}>
                 <div>
                     <label htmlFor="userName">Username</label>

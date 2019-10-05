@@ -18,7 +18,9 @@ export default class login extends React.Component {
     render() {
         if (window.$store.getState().TYPE === 'pc'){
             return (
-                <section><LoginHeader />
+                <section>
+                    <div className={LoginCss.BG}></div>
+                    <LoginHeader />
                     <div className={LoginCss.container}>
                         <label htmlFor="userName">UserName</label>
                         <input className={LoginCss['user-info']} id="userName"  type="text" />
