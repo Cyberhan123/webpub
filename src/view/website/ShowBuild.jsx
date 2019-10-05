@@ -1,4 +1,4 @@
-import style from './../../css/WebSite.less'
+import style from './../../css/website/ShowBuild.less'
 class ShowBuild extends React.Component {
     constructor(props) {
         super(props);

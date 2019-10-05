@@ -5,7 +5,8 @@ import Home from './view/Home.jsx'
 import Login from './view/Login.jsx'
 import Register from "./view/register.jsx";
 import Website from './view/website/index.jsx'
-import Showbuild from './view/website/show.jsx'
+import Showbuild from './view/website/ShowBuild.jsx'
+import Common from './components/Common.jsx'
 const routes = [
     // {
     //     patch: "/",
@@ -18,16 +19,22 @@ const routes = [
         path: "/login",
         component: Login
 
-    },{
-        path:"/register",
-        component:Register
     }, {
-        path: "/website/index",
-        component: Website
-    },{
-        path:"/website/showbuild",
-        component:Showbuild
-    }
+        path: "/register",
+        component: Register
+    }, {
+        path: "/website",
+        component: Common,
+        routes: [
+            {
+                path: "/website/index",
+                component: Website
+            }, {
+                path: "/website/showbuild",
+                component: Showbuild
+            }
+        ]
+    },
 ];
 
 export default routes;

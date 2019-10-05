@@ -1,0 +1,163 @@
+.website-wraper {
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+}
+
+.header {
+    height: 200px;
+}
+
+.header-bg {
+    position: absolute;
+    background: linear-gradient(to bottom, #000, #1e2d3b);
+    height: 400px;
+    left: 0;
+    right: 0;
+    min-width: 1200px;
+}
+
+.header h1 {
+    position: relative;
+    top: 100px;
+    left: 125px;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.main {
+    position: relative;
+    background: #fff;
+    left: calc(50%-515px);
+    width: 1030px;
+    height: 100%;
+    min-height: 700px;
+    border-radius: 20px;
+    border: 1px solid rgba(14, 30, 37, .12);
+    box-shadow: 2px 2px 2px rgba(14, 30, 37, .12);
+    padding: 10px;
+}
+
+.nav {
+    height: 100px;
+    width: 1000px;
+}
+
+.nav input {
+    position: relative;
+    padding-left: 15px;
+    top: calc(50%-20px);
+    left: 20px;
+    width: 425px;
+    height: 40px;
+    border-radius: 5px;
+    border: #1e2d3b 1px solid;
+}
+
+.nav input:hover,
+.nav input:focus {
+    border-radius: 5px;
+    border: #00c2b2 2px solid;
+    outline: none;
+}
+
+.button {
+    position: relative;
+    top: calc(50%-20px);
+    float: right;
+    width: 120px;
+    height: 40px;
+    right: 0;
+}
+
+.button a {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border: 1px solid #e9ebeb;
+    border-bottom: 1px solid #e1e2e4;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .12);
+    background: #00c2b2;
+}
+
+.button a:hover {
+    text-decoration: none;
+
+}
+
+.list-wraper {
+    position: relative;
+    left: calc(50%-500px);
+    width: 1000px;
+    height: 100%;
+    padding: 10px;
+}
+
+.list-item {
+    position: relative;
+    left: calc(50%-490px);
+    width: 980px;
+    height: auto;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+
+.list-item:nth-child(2n+0) {
+    background-color: rgba(14, 30, 37, .02);
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: rgba(14, 30, 37, .05);
+}
+
+.website-name,
+.website-desc {
+    position: relative;
+    top: 10px;
+    left: 100px;
+}
+
+.website-name h3 {
+    font-size: 20px;
+}
+
+.website-time {
+    width: 400px;
+    position: relative;
+    margin: 10px 0;
+    left: 500px;
+}
+
+.arrow {
+    position: absolute;
+    top: calc(50%-10px);
+    right: 10px;
+    transform: rotate(90deg);
+}
+
+.arrow::after,
+.arrow::before {
+    position: absolute;
+    content: '';
+    border-top: 10px transparent dashed;
+    border-left: 10px transparent dashed;
+    border-right: 10px transparent dashed;
+}
+
+.arrow:before {
+    border-bottom: 10px #666 solid;
+}
+
+.arrow:after {
+    top: 2px;
+    /*覆盖并错开1px*/
+    border-bottom: 10px #fff solid;
+}

@@ -1,7 +1,6 @@
-import style from './../../css/Website.less'
+import style from './../../css/website/Website.less'
 import { getUserWebsite } from '../../api/fetchUserData';
-const { BrowserRouter, Link } = ReactRouterDOM;
-
+const { Link } = ReactRouterDOM;
 class WebSite extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +19,6 @@ class WebSite extends React.Component {
     }
     render() {
         let dom = [];
-        console.log(this.state)
         this.state.list.map((value, index) => {
             dom.push(
                 <li key={`list-${index}`} className={style['list-item']}>
@@ -41,23 +39,17 @@ class WebSite extends React.Component {
             )
         })
         return (
-            <div className={style['website-wraper']}>
-                <div className={style.header}>
-                    <div className={style["header-bg"]}></div>
-                    <h1>我的站点</h1>
+            <div>
+                <div className={style.nav}>
+                    <input type="text" placeholder="搜索我的站点" />
+                    <div className={style.button}>
+                        <Link to="/website/showbuild">创建新站点</Link>
+                    </div>
                 </div>
-                <div className={style.main}>
-                    <div className={style.nav}>
-                        <input type="text" placeholder="搜索我的站点" />
-                        <div className={style.button}>
-                            <Link to="/website/showbuild">创建新站点</Link>
-                        </div>
-                    </div>
-                    <div className={style['list-wraper']}>
-                        <ul>
-                            {dom}
-                        </ul>
-                    </div>
+                <div className={style['list-wraper']}>
+                    <ul>
+                        {dom}
+                    </ul>
                 </div>
             </div>
         );
