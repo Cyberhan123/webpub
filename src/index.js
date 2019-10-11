@@ -1,7 +1,7 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 import App from './view/App.jsx';
-import './css/reset.css';
+import './css/autumn/index.less'
 import * as serviceWorker from './serviceWorker';
 import { initScreen, isMobile } from "./common/common";
 import store from "./redux";

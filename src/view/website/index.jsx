@@ -15,6 +15,12 @@ class WebSite extends React.Component {
         })
     }
     componentWillMount() {
+        window.$store.dispatch({
+            type: "changeWebsiteTitle",
+            website: {
+                title: '我的站点'
+            }
+        })
         this.fetchWebsiteList()
     }
     render() {
@@ -33,7 +39,6 @@ class WebSite extends React.Component {
                         最后发布时间：{value.time}
                     </div>
                     <div className={style.arrow}>
-
                     </div>
                 </li>
             )

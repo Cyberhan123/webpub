@@ -56,11 +56,15 @@ module.exports = {
                                 context: path.resolve(__dirname, 'src'),
                                 hashPrefix: 'my-custom-hash',
                             },
+                            importLoaders: 2,
+                            // 0 => no loaders (default);
+                            // 1 => postcss-loader;
+                            // 2 => postcss-loader, less-loader
                         }
-                    }
-                    ,
-                    "postcss-loader",
+                    },
+                    'postcss-loader',
                     'less-loader', // compiles Less to CSS
+
                 ],
             },
             {

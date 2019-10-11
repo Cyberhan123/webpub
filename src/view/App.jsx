@@ -1,5 +1,5 @@
 
-const { BrowserRouter, Link } = ReactRouterDOM;
+const { BrowserRouter, Link,IndexRouter } = ReactRouterDOM;
 const Router = BrowserRouter;
 import Bottombar from './../components/BottomBar.jsx'
 import routes from '../router'
@@ -17,6 +17,7 @@ export default class App extends React.Component {
           <Router>
             <Navbar/>
             <main>
+
             {routes.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
             ))}

@@ -7,6 +7,8 @@ function reducer(state = initState, action) {
         case 'MOBILE':
             state.TYPE = action.TYPE;
             break;
+        case 'changeWebsiteTitle':
+            state.website.title = action.website.title;
         default:
             break;
     }

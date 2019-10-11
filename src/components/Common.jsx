@@ -5,15 +5,20 @@ class Common extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            title: ""
         }
     }
+    componentDidMount() {
+        this.setState({
+            title: window.$store.getState().website.title
+        })
+    }
     render() {
-        console.log(this.props);
         return (
             <div className={style['website-wraper']}>
                 <div className={style.header}>
                     <div className={style["header-bg"]}></div>
-                    <h1>我的站点</h1>
+                    <h1>{this.state.title}</h1>
                 </div>
                 <div className={style.main}>
                     {this.props.routes.map((route, i) => (
