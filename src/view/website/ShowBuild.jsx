@@ -1,4 +1,5 @@
 import style from './../../css/website/ShowBuild.less'
+const { BrowserRouter, Link, IndexRouter } = ReactRouterDOM;
 class ShowBuild extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,7 @@ class ShowBuild extends React.Component {
     handleToPreventStep() {
         // 增加保证执行不会发生错误
         this.setState((prevState, props) => {
-            if (prevState.active < 3)
+            if (prevState.active >=0)
                 return { active: prevState.active - 1 }
         })
     }
@@ -33,20 +34,20 @@ class ShowBuild extends React.Component {
     render() {
         let dom = [
             <div>
-                <label htmlFor="">输入你要发布的页面的Git链接</label>
-                <input type="text" />
+                <label className="is-block" htmlFor="git-adress">输入你要发布的页面的Git链接:</label>
+                <input className={style['swiper-input']} id="git-adress" type="text" />
             </div>,
             <div>
-                <label htmlFor="">输入你的构建命令</label>
-                <input type="text" />
+                <label className="is-block" htmlFor="command">输入你的构建命令:</label>
+                <input className={style['swiper-input']} id="command" type="text" />
             </div>,
             <div>
-                <label htmlFor="">输入你要灰度发布的地址</label>
-                <input type="text" />
+                <label className="is-block" htmlFor="dark-publick-adress">输入你要灰度发布的地址:</label>
+                <input className={style['swiper-input']} id="dark-publick-adress" type="text" />
             </div>,
             <div>
-                <label htmlFor="">输入你要正式发布的地址</label>
-                <input type="text" />
+                <label className="is-block" htmlFor="publick-adress">输入你要正式发布的地址:</label>
+                <input className={style['swiper-input']} id="public-adress" type="text" />
             </div>
         ];
         return (
@@ -58,7 +59,7 @@ class ShowBuild extends React.Component {
                         )
                     })}
                 </div>
-                <div className={style['swiper-main']}>
+                <div className={style['swiper-main']+' is-flex'}>
                     {dom.map((elem, index) => {
                         return (
                             <div className={[style['swiper-item'], index === this.state.active ? style['swiper-item-active'] : null].join(' ')} key={`swiper-item-${index}`}>
@@ -67,11 +68,12 @@ class ShowBuild extends React.Component {
                         )
                     })}
                 </div>
-                <div>
-                    <button onClick={this.handleToPreventStep} className={this.state.active > 0 ? 'is-block' : 'is-hidden'}>上一步</button>
-                    <button onClick={this.handleToNextStep}>下一步</button>
-                </div>
-            </div>
+                <div className={style['swiper-btn']}>
+                <Link to="#" className={this.state.active === 3 ? 'button is-inline-block' : 'button is-hidden'} style={{background:"hsl(171, 100%, 41%)"}}>完成</Link>
+                <button onClick={this.handleToNextStep} className={this.state.active === 3 ? 'button is-hidden' : 'button is-inline-block'} style={{background:"hsl(171, 100%, 41%)"}}>下一步</button>
+                <button onClick={this.handleToPreventStep} className={this.state.active > 0 ? 'button is-inline-block' : 'button is-hidden'}>上一步</button>
+                </div >
+            </div >
         );
     }
 }
