@@ -1,5 +1,5 @@
 
-const { BrowserRouter, Link,IndexRouter } = ReactRouterDOM;
+const { BrowserRouter, Link, IndexRouter, Redirect } = ReactRouterDOM;
 const Router = BrowserRouter;
 import Bottombar from './../components/BottomBar.jsx'
 import routes from '../router'
@@ -15,25 +15,26 @@ export default class App extends React.Component {
       return (
         <div className={style.App}>
           <Router>
-            <Navbar/>
+            {/* 增加跳转 */}
+            {/* <Redirect to="/home" /> */}
+            <Navbar />
             <main>
-
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
             </main>
-            <Bottombar/>
+            <Bottombar />
           </Router>
         </div>);
     } else {
       return (
         <div className={mStyle.App}>
           <Router>
-            <Navbar/>
+            <Navbar />
             <main>
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route} />
-            ))}
+              {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+              ))}
             </main>
           </Router>
         </div>);

@@ -3,18 +3,17 @@
 // import Cart from './view/Cart.jsx';
 import Home from './view/Home.jsx'
 import Login from './view/Login.jsx'
-import Register from "./view/register.jsx";
+import Register from "./view/register.jsx"
 import Website from './view/website/index.jsx'
 import Showbuild from './view/website/ShowBuild.jsx'
 import Common from './components/Common.jsx'
+import Detail from './view/website/detail.jsx'
+import NotFound from './view/NotFound.jsx'
 const routes = [
-    // {
-    //     patch: "/",
-    //     to: "/home"
-    // },
     {
         path: "/home",
         component: Home,
+        index: true
     }, {
         path: "/login",
         component: Login
@@ -34,7 +33,14 @@ const routes = [
                 component: Showbuild
             }
         ]
-    },
+    }, {
+        path: "/detail/website",
+        component: Detail
+    }
+    // {
+    //     path: "*",
+    //     component: NotFound
+    // }
 ];
 
 export default routes;
