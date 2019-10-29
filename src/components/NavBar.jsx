@@ -14,21 +14,23 @@ export default class NavBar extends React.Component {
         const __this = this
         async function fetchNavList() {
             let data = await getNavList();
-            // __this.setState({
-            //     navList: data.data
-            // })
             if (!localStorage.getItem('navList')) {
-                localStorage.setItem('navList', data.data)
-                console.log('setData')
+                localStorage.removeItem('navList')
+                localStorage.setItem('navList', JSON.stringify(data))
             } else {
-                console.log(JSON.parse(localStorage.getItem('navList')))
+                let navList = JSON.parse(localStorage.getItem('navList'))
+                //设置过期时间
+                if (navList.Etag != data.Etag) {
+                    localStorage.removeItem('navList');
+                    localStorage.setItem('navList',JSON.stringify(data))
+                }
             }
-
         };
         fetchNavList()
         //即使网络错误也可保存数据
+        let navList= JSON.parse(localStorage.getItem('navList'))
         __this.setState({
-            navList: JSON.parse(localStorage.getItem('navList'))
+            navList:navList.data
         })
 
     }

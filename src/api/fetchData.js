@@ -13,4 +13,11 @@ let postUserInfo = function (data) {
 let getUserWebsite = function () {
     return GET(`${HOST}/website/list`)
 }
-export { getUserWebsite, postUserInfo }
+
+// 获取用户的网站构建信息
+//http://rap2api.taobao.org/app/mock/232519/v1/webpub/website/info
+let getUserWebsiteDetail = function (query) {
+    return GET(`${HOST}/website/info`)
+}
+
+export { getUserWebsite, postUserInfo,getUserWebsiteDetail }

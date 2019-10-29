@@ -1,5 +1,5 @@
 import style from './../../css/website/Website.less'
-import { getUserWebsite } from '../../api/fetchUserData';
+import { getUserWebsite } from '../../api/fetchData';
 const { Link } = ReactRouterDOM;
 class WebSite extends React.Component {
     constructor(props) {

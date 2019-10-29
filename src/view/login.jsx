@@ -1,7 +1,7 @@
 import MobileLoginCss from './../css/mobilePhone/login/login.css'
 import LoginCss from './../css/login.css'
 import LoginHeader from '../components/LoginHeader.jsx'
-import { postUserInfo } from '../api/fetchUserData'
+import { postUserInfo } from '../api/fetchData'
 
 export default class login extends React.Component {
     constructor(props) {
