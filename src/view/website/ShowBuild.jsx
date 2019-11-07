@@ -10,7 +10,7 @@ class ShowBuild extends React.Component {
         this.handleToPreventStep = this.handleToPreventStep.bind(this);
     }
     handleToNextStep() {
-        // 增加保证执行不会发生错误
+         // 增加保证执行不会发生错误
         this.setState((prevState, props) => {
             if (prevState.active < 3)
                 return { active: prevState.active + 1 }
