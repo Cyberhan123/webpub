@@ -10,6 +10,13 @@ import Common from './components/Common.jsx'
 import Detail from './view/website/Detail.jsx'
 import NotFound from './view/NotFound.jsx'
 import Ftp from './view/ftp/index.jsx'
+import Db from './view/db/index.jsx'
+
+import Message from './view/message/index.jsx'
+import Watch from './view/watch/index.jsx'
+import Safe from './view/safe/index.jsx'
+import Plan from './view/plan/index.jsx'
+
 const routes = [
     {
         path: "/home",
@@ -18,7 +25,6 @@ const routes = [
     }, {
         path: "/login",
         component: Login
-
     }, {
         path: "/register",
         component: Register
@@ -37,15 +43,66 @@ const routes = [
     }, {
         path: "/detail/website",
         component: Detail
-    },{
+    }, {
+        path: "/ftp",
+        component: Common,
+        routes: [
+            {
+                path: "/ftp/index",
+                component: Ftp
+            },
+        ]
 
-        path:"/ftp/index",
-        component:Ftp
+    },
+    {
+        path: "/db",
+        component: Common,
+        routes: [
+            {
+                path: "/db/index",
+                component: Db
+            },
+        ]
+
+    }, {
+        path: "/watch",
+        component: Common,
+        routes: [
+            {
+                path: "/watch/index",
+                component: Watch
+            },
+        ]
+
+    }, {
+        path: "/safe",
+        component: Common,
+        routes: [
+            {
+                path: "/safe/index",
+                component: Safe
+            },
+        ]
+
+    }, {
+        path: "/message",
+        component: Common,
+        routes: [
+            {
+                path: "/message/index",
+                component: Message
+            },
+        ]
+    }, {
+        path: "/plan",
+        component: Common,
+        routes: [
+            {
+                path: "/plan/index",
+                component: Plan
+            },
+        ]
     }
-    // {
-    //     path: "*",
-    //     component: NotFound
-    // }
 ];
 
 export default routes;
