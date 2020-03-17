@@ -3,7 +3,6 @@ import button from "../../css/Button.less"
 import Alert from "../../components/Alert.jsx"
 import {getUserWebsite} from "../../api/fetchData";
 
-const {Link} = ReactRouterDOM;
 export default class Ftp extends React.Component {
     constructor(props) {
         super(props);
