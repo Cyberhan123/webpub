@@ -1,4 +1,5 @@
 import style from "../../css/website/Website.less";
+import Alert from "../../components/Alert.jsx";
 const { Link } = ReactRouterDOM;
 export default class Ftp extends React.Component {
     componentWillMount() {
@@ -10,6 +11,12 @@ export default class Ftp extends React.Component {
         })
         // this.fetchWebsiteList()
     }
+    open() {
+        Alert.open({
+            title: "添加计划任务",
+        });
+    };
+
     render() {
         // let dom = [];
         // this.state.list.map((value, index) => {
@@ -33,9 +40,8 @@ export default class Ftp extends React.Component {
         return (
             <div>
                 <div className={style.nav}>
-                    <input type="text" placeholder="搜索我的站点"/>
-                    <div className={style.button}>
-                        <Link to="/website/showbuild">创建新站点</Link>
+                    <div className={style.button} onClick={this.open}>
+                        <a>添加计划任务</a>
                     </div>
                 </div>
                 <div className={style['list-wraper']}>

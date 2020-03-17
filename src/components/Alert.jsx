@@ -3,6 +3,7 @@ import style from './../css/Alert.less'
 let defaultState = {
     alertStatus: false,
     title: "提示",
+    dom: [],
     closeAlert: function () {
         document.querySelector("body").style = "position: inherit";
     }
@@ -45,12 +46,15 @@ class AlertBox extends React.Component {
             <div className={style["alert-borad"]}
                  style={this.state.alertStatus ? {display: 'block'} : {display: 'none'}}>
                 <div className={style.alert}>
-                    <div>
+                    <div className={style["alert-title"]}>
                         <p>{this.state.title}</p>
+                    </div>
+                    <div className={style["alert-main"]}>
+                        {this.state.dom}
                     </div>
                     <div className={style["alert-bottom"]}>
                         <div className={style["alert-confirm"]} onClick={this.confirm.bind(this)}>确认</div>
-                        <div className={style["alert-close"]} onClick={this.confirm.bind(this)}>关闭</div>
+                        <div className={style["alert-close"]} onClick={this.close.bind(this)}>关闭</div>
                     </div>
                 </div>
             </div>
