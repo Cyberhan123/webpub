@@ -1,0 +1,1102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "ApiBoot通过自动化配置快速集成Swagger2文档，仅需一个注解、一个依赖即可。",
+    "version": "2.2.2.RELEASE",
+    "title": "ApiBoot快速集成Swagger文档",
+    "contact": {
+      "name": "恒宇少年",
+      "url": "http://blog.yuqiyu.com",
+      "email": "jnyuqy@gmail.com"
+    },
+    "license": {
+      "name": "ApiBoot",
+      "url": "https://github.com/hengboy/api-boot"
+    }
+  },
+  "host": "localhost:9000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "db-controller",
+      "description": "DB Controller"
+    },
+    {
+      "name": "ftp-controller",
+      "description": "FTP Controller"
+    },
+    {
+      "name": "home-controller",
+      "description": "Home Controller"
+    },
+    {
+      "name": "safe-controller",
+      "description": "Safe Controller"
+    },
+    {
+      "name": "watch-controller",
+      "description": "Watch Controller"
+    },
+    {
+      "name": "web-site-controller",
+      "description": "Web Site Controller"
+    }
+  ],
+  "paths": {
+    "/v1/api/db/create": {
+      "get": {
+        "tags": ["db-controller"],
+        "summary": "createDb",
+        "operationId": "createDbUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "address",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "codeing",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "dataAccess",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "db_user",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "dtype",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ps",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/db/delete": {
+      "get": {
+        "tags": ["db-controller"],
+        "summary": "deleteFtp",
+        "operationId": "deleteFtpUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/ftp/create": {
+      "get": {
+        "tags": ["ftp-controller"],
+        "summary": "createFtp",
+        "operationId": "createFtpUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "ftp_password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ftp_username",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ps",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/ftp/delete": {
+      "get": {
+        "tags": ["ftp-controller"],
+        "summary": "deleteFtp",
+        "operationId": "deleteFtpUsingGET_1",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "username",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/home/navList": {
+      "get": {
+        "tags": ["home-controller"],
+        "summary": "navList",
+        "operationId": "navListUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NavItem"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/safe/ip/ban": {
+      "post": {
+        "tags": ["safe-controller"],
+        "summary": "banIp",
+        "operationId": "banIpUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "port",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ps",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/safe/port/add": {
+      "post": {
+        "tags": ["safe-controller"],
+        "summary": "addAccessPort",
+        "operationId": "addAccessPortUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "port",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ps",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/safe/ssh": {
+      "get": {
+        "tags": ["safe-controller"],
+        "summary": "getSshInfo",
+        "operationId": "getSshInfoUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      },
+      "post": {
+        "tags": ["safe-controller"],
+        "summary": "setSshPort",
+        "operationId": "setSshPortUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "port",
+            "in": "query",
+            "description": "port",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/backup/create": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "createSiteBackup",
+        "operationId": "createSiteBackupUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/backup/delete": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "deleteSiteBackup",
+        "operationId": "deleteSiteBackupUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/backup/list": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "listSiteBackup",
+        "operationId": "listSiteBackupUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "p",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "p",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "table",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "table",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tojs",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "tojs",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/create": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "createSite",
+        "operationId": "createSiteUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "codeing",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ftp",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "ftp_password",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ftp_username",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "port",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "ps",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sql",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "type_id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "webname",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/delete": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "deleteSite",
+        "operationId": "deleteSiteUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "database",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ftp",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "webname",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/desc": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "editSiteDesc",
+        "operationId": "editSiteDescUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/list": {
+      "get": {
+        "tags": ["web-site-controller"],
+        "summary": "getSiteList",
+        "operationId": "getSiteListUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/start": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "startSite",
+        "operationId": "startSiteUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/site/stop": {
+      "post": {
+        "tags": ["web-site-controller"],
+        "summary": "stopSite",
+        "operationId": "stopSiteUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/v1/api/watch/total": {
+      "get": {
+        "tags": ["watch-controller"],
+        "summary": "total",
+        "operationId": "totalUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "ApiBoot Security Oauth 认证头信息": ["global"]
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "securityDefinitions": {
+    "ApiBoot Security Oauth 认证头信息": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "NavItem": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "NavItem"
+    }
+  }
+}
